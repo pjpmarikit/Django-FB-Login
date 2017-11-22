@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     # Django Social Auth
     'social_django',
+
+    'fb',
 ]
 
 MIDDLEWARE = [

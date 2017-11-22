@@ -1,0 +1,5 @@
+{% extends 'fb/base.html' %}
+
+{% block content %}
+<p>Hello {{ user.username }}! (<a href="{% url 'logout' %}">logout</a>)</p>
+{% endblock %}

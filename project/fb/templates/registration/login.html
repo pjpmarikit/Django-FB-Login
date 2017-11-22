@@ -1,0 +1,24 @@
+{% extends 'fb/base.html' %}
+{% block css %}
+<style type="text/css">
+    div{
+    	text-align: center;
+    }
+    hr{
+        width: 100px;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div>
+    <p>Django Authentication</p>
+	<form method="post">
+		{% csrf_token %}
+		{{ form.as_p }}
+	<button type="submit">LOGIN</button>
+	</form> 
+
+    <hr>
+    <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
+</div>
+{% endblock %}
